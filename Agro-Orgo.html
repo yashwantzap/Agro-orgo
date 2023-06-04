@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro-Orgo</title>
+  <link rel="icon" type="image/x-icon" href="/logo.jpg">
+  <link rel="stylesheet" href="agro.css">
+</head>
+<body>
+  <header>
+    <h1 class="title">Agro-Orgo</h1>
+    <div class="navbar" id="myTopnav">
+      <a href="#home" class="active">Home</a>
+      <a href="#crop">Crops Management</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <section class="about" id="about">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 my-text"></div>
+      <h2 class="text-center">About Us</h2>
+      <img src="logo.jpg">
+      <p>Organic farming promotes sustainable agricultural practices that prioritize environmental health and biodiversity.
+        Agro-Orgo website is a powerful tool that can help farmers manage and enhance their organic farming operations.
+        Agro-Orgo helps people to grow small batches of crops/plants in nearby areas where they live like a terrace, community farm etc.
+      </p>
+      <p>We are dedicated to promoting sustainable and organic farming practices to ensure healthy and nutritious food for everyone.
+        Our Farming Techniques follows strict organic farming methods, free from harmful pesticides and synthetic fertilizers. We believe in preserving the environment and providing our customers with high-quality, chemical-free produce.
+      </p>
+    </div>
+  </section>
+
+  <section class="crop" id="corp">
+    <h2 class="text-center">Crops</h2>
+    <p>Season:</p>
+    <select class="dropdown"id="dropdown1">
+      <option value="">Select a Season</option>
+      <option value="1">Summer</option>
+      <option value="2">Winter</option>
+      <option value="3">Rainy</option>
+      <option value="4">Spring</option>
+    </select>
+  
+    <div id="dropdownContainer1" style="display: none;">
+      <p>Crop:</p>
+      <select class="dropdown" id="dropdown2">
+        <option value="">Select a Crop</option>
+        <option value="suboption1">Watermelon</option>
+        <option value="suboption2">Musk Melon</option>
+        <option value="suboption3">Cucumber</option>
+        <option value="suboption4">Ragi</option>
+        <option value="suboption5">Mangoes</option>
+        <option value="suboption6">Jowar</option>
+        <option value="suboption7">Bajra</option>
+        <option value="suboption8">Beans</option>
+        <option value="suboption9">Sun Flower</option>
+
+      </select>
+    </div>
+
+    <div id="dropdownContainer2" style="display: none;">
+      <select class="dropdown" id="dropdown3">
+          <option value="">Select a Crop</option>
+          <option value="suboption1">Wheat</option>
+          <option value="suboption2">Barley</option>
+          <option value="suboption3">Peas</option>
+          <option value="suboption4">Mustard</option>
+          <option value="suboption5">Chilli</option>
+          <option value="suboption6">Onion</option>
+          <option value="suboption7">Apple</option>
+          <option value="suboption8">Spinach</option>
+          <option value="suboption9">Carrot</option>
+      </select>
+    </div>
+
+    <div id="dropdownContainer3" style="display: none;">
+      <select class="dropdown" id="dropdown4">
+          <option value="">Select a Crop</option>
+          <option value="suboption1">Paddy</option>
+          <option value="suboption2">Maize</option>
+          <option value="suboption3">Jowar</option>
+          <option value="suboption4">Beetroot</option>
+          <option value="suboption5">Eggplant</option>
+          <option value="suboption6">Pumpkin</option>
+          <option value="suboption7">Okra</option>
+          <option value="suboption8">Lettuce</option>
+          <option value="suboption9">Banana</option>
+          <option value="sub-option10">Guava</option>
+        </select>
+    </div>
+    <div id="dropdownContainer4" style="display: none;">
+      <select class="dropdown" id="dropdown5">
+          <option value="">Select a Spring Crop</option>
+          <option value="suboption1">Broccoli</option>
+          <option value="suboption2">Cabbage</option>
+          <option value="suboption3">Sprouts</option>
+          <option value="suboption4">Tomatoes</option>
+          <option value="suboption5">Strawberry</option>
+          <option value="suboption6">Radish</option>
+          <option value="suboption7">Apricots</option>
+          <option value="suboption8">Avacadoes</option>
+          <option value="suboption9">Kiwi</option>
+          <option value="sub-option10">Lemon</option>
+        </select>
+    </div>
+  
+    <script>
+      // Access the dropdown elements
+      var dropdown1 = document.getElementById("dropdown1");
+      var dropdown2 = document.getElementById("dropdown2");
+      var dropdown3 = document.getElementById("dropdown3");
+      var dropdown4 = document.getElementById("dropdown4");
+      var dropdown4 = document.getElementById("dropdown5");
+      var dropdownContainer = document.getElementById("dropdownContainer");
+  
+      // Add event listener for the change event on the first dropdown
+      dropdown1.addEventListener("change", function() {
+        // Check if the selected option is not the default "Select an option" option
+        if (dropdown1.value == "1") {
+          // Show the sub-optioned dropdown
+          dropdownContainer1.style.display = "block";
+          dropdownContainer2.style.display = "none";
+          dropdownContainer3.style.display = "none";
+          dropdownContainer4.style.display = "none";
+        } else if (dropdown1.value == "2") {
+          dropdownContainer1.style.display = "none";
+          dropdownContainer2.style.display = "block";
+          dropdownContainer3.style.display = "none";
+          dropdownContainer4.style.display = "none";
+        } else if (dropdown1.value == "3") {
+          dropdownContainer1.style.display = "none";
+          dropdownContainer2.style.display = "none";
+          dropdownContainer3.style.display = "block";
+          dropdownContainer4.style.display = "none";
+        } else if (dropdown1.value == "4") {
+          dropdownContainer1.style.display = "none";
+          dropdownContainer2.style.display = "none";
+          dropdownContainer3.style.display = "none";
+          dropdownContainer4.style.display = "block";
+        } else {
+          // Hide the all the dropdown
+          dropdownContainer1.style.display = "none";
+          dropdownContainer2.style.display = "none";
+          dropdownContainer3.style.display = "none";
+          dropdownContainer4.style.display = "none";
+        }
+      });
+  
+      // Add event listener for the change event on the second dropdown
+      dropdown2.addEventListener("change", function() {
+        // Get the selected value
+        var selectedOption = dropdown2.value;
+  
+        // Display the selected value
+        console.log("Selected sub-option: " + selectedOption);
+      });
+    </script>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="container">
+      <form action="action_page.php">
+    
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+    
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+        <input type="submit" value="Submit">
+    
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Agro-Orgo. All rights reserved.</p>
+  </footer>
+</body>
+</html>
